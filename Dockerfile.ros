@@ -1,0 +1,5 @@
+FROM ros:jazzy
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ros-jazzy-mavros ros-jazzy-mavros-extras \
+    && /opt/ros/jazzy/lib/mavros/install_geographiclib_datasets.sh \
+    && rm -rf /var/lib/apt/lists/*
